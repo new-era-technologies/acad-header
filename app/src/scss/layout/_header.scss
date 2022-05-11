@@ -27,9 +27,17 @@
         @include font(Merriweather Sans, normal, 700, 14px, 1.5em, #000);
     }
     &__link {
+        &--external {
+            align-items: center;
+        }
         &--external::after {
+            width: 14px;
+            height: 14px;
             margin-left: 5px;
-            content: "\f35d";
+            background-image: url(../../assets/img/icons/link.png);
+            background-size: 14px 14px;
+            display: inline-flex;
+            content: "";
         }
     }
     &__button--header {
@@ -38,8 +46,13 @@
         background-color: #fff;
     }
     &__button--header::after {
+        width: 10px;
+        height: 10px;
         margin-left: 5px;
-        content: '\f107';
+        background-image: url(../../assets/img/icons/arrow-down.png);
+        background-size: 10px 10px;
+        display: inline-flex;
+        content: "";
     }
     &__sub_list {
         max-width: 230px;
@@ -70,10 +83,5 @@
     }
     &__sub_link:hover {
         color: #d8770e;
-    }
-    .visible {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
     }
 }

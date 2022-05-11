@@ -52,7 +52,12 @@
     padding: 15px 10px;
     position: absolute;
     right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
     box-sizing: border-box;
+    z-index: 1;
     &__input {
         width: 100%;
         @include font(Merriweather Sans, normal, 300, 12px, 1.3em, #666666);
