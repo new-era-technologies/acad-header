@@ -19,11 +19,11 @@ buttons.forEach(it => it.addEventListener('click', function(e) {
 
 
 //close dropdown/search menu if clicking outside
-window.onclick = function(e) {
+document.addEventListener('click', function(e) {
     if ((!e.target.matches('.nav__button')) && (!e.target.matches('.search__input'))) {
         for (let i = 0; i < subLists.length; i++) {
             subLists[i].classList.remove('visible');
             searchField.classList.remove('visible');
         }
     }
-};
+});
