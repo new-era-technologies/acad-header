@@ -16,34 +16,28 @@
 }
 
 .nav {
-    &__list {
-        display: flex;
-        align-items: center;
-    }
-    &__item {
+    &__item--header {
         margin-right: 15px;
     }
-    &__item:last-child {
+    &__item--header:last-child {
         margin-right: 0;
     }
-    &__link,
+    &__link--header,
     &__button {
         @include font(Merriweather Sans, normal, 700, 14px, 1.5em, #000);
-        text-decoration: none;
+    }
+    &__link {
         &--external::after {
             margin-left: 5px;
             content: "\f35d";
         }
     }
-    &__button {
+    &__button--header {
         padding: 15px 0;
         position: relative;
-        border: none;
         background-color: #fff;
-        outline: none;
-        cursor: pointer;
     }
-    &__button::after {
+    &__button--header::after {
         margin-left: 5px;
         content: '\f107';
     }

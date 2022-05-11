@@ -2,6 +2,7 @@
 @import "base/fonts";
 @import "utils/mixins";
 @import "layout/header";
+@import "layout/uber.scss";
 .main-wrapper {
     background: #edf3f9;
 }
@@ -9,6 +10,22 @@
 .container {
     width: 320px;
     margin: 0 auto;
+}
+
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        display: flex;
+        text-decoration: none;
+    }
+    &__button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
 }
 
 @media all and (min-width: 960px) {
