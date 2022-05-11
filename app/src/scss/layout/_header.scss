@@ -1,0 +1,41 @@
+.header {
+    &__wrapper {
+        width: 100%;
+        height: 120px;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
+    &__inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 15px;
+    }
+    &__item:last-child {
+        margin-right: 0;
+    }
+    &__link {
+        @include font(Merriweather Sans, normal, 700, 14px, 1.5em, #000);
+        text-decoration: none;
+        &--dropped::after {
+            margin-left: 5px;
+            content: '\f107';
+        }
+        &--external::after {
+            margin-left: 5px;
+            content: "\f35d";
+        }
+    }
+}
